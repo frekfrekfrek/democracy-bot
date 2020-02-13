@@ -1,6 +1,9 @@
 # permissions integer : 330816
 
 import discord
+import config
+
+token = config.token # put your bot token in a config.py file and add this file to the .gitignore
 
 client = discord.Client()
 
@@ -18,4 +21,4 @@ async def on_message(message):
         await message.channel.send('One of my planned features is to automatize server-related decisions decided by these votes. ')
         await message.channel.send('Right now I cannot do any of this yet, but be on the lookout for updates !')
 
-client.run('token')
+client.run(token)
